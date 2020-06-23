@@ -1,0 +1,86 @@
+.flights-container {
+    width: 100%;
+    max-width: 1180px;
+    padding: 0 30px;
+    margin: 32px auto;
+}
+
+.flights-container header {
+    display: flex;
+    align-items: center;
+}
+
+.flights-container header img {
+    height: 128px;
+}
+
+.flights-container header a {
+    width: 260px;
+    margin-left: auto;
+    margin-top: 0;
+}
+
+.flights-container header button {
+    height: 60px;
+    width: 60px;
+    border-radius: 4px;
+    border: 1px solid #17333C;
+    background: #17333C;
+    margin-left: 16px;
+    transition: border-color 0.2s;
+}
+
+.flights-container header button:hover {
+    border-color: #999999;
+}
+
+.flights-container h1 {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-weight: 300;
+    text-align: center;
+    font-size: 32px;
+    color: #17333C;
+}
+
+.flights-container ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 24px;
+    list-style: none;
+}
+
+.flights-container ul li {
+    background: #f0f0f5;
+    padding: 24px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.flights-container ul li button {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    border: 0;
+}
+
+.flights-container ul li button:hover {
+    opacity: 0.8;
+}
+
+.flights-container ul li strong {
+    display: block;
+    margin-bottom: 16px;
+    color: #41414d;
+}
+
+.flights-container ul li p + strong {
+    margin-top: 32px;
+
+}
+
+.flights-container ul li p {
+    color: #737380;
+    line-height: 21px;
+    font-size: 16px;
+}
