@@ -12,6 +12,10 @@ import styles from './styles';
 export default function Flights() {
     const [flights, setFlights] = useState([]);
     const [total, setTotal] = useState(0);
+
+    const [page, setPage] = useState(1);
+    const [loading, setLoading] = useState(false);
+
     const navigation = useNavigation();
 
     function navigateToDetail(flight) {
@@ -19,10 +23,24 @@ export default function Flights() {
     }
 
     async function loadFlights() {
-        const response = await api.get('flights');
+        if(loading) {
+            return;
+        }
 
-        setFlights(response.data);
+        if(total>0 && flights.lenght===total) {
+            return;
+        }
+
+        setLoading(true);
+
+        const response = await api.get('flights', {
+            params: { page }
+        });
+
+        setFlights([...flights, ...response.data]);
         setTotal(response.headers['x-total-count']);
+        setPage(page+1);
+        setLoading(false);
     }
 
 
@@ -47,6 +65,8 @@ export default function Flights() {
                 data={flights}
                 keyExtractor={flight => String(flight.id)}
                 showsVerticalScrollIndicator={false}
+                onEndReached={loadFlights}
+                onEndReachedThreshold={0.2}
                 renderItem={({ item: flight }) => (
                     <View style={styles.flight}>
                         <Text style={styles.flightProperty}>AIRLINE:</Text>
