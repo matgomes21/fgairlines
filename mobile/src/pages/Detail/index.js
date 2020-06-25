@@ -1,6 +1,6 @@
 import React from 'react';
 import { Feather } from '@expo/vector-icons';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import { View, Text, Image, TouchableOpacity, Linking } from 'react-native';
 import * as MailComposer from 'expo-mail-composer';
 
@@ -10,7 +10,10 @@ import styles from './styles';
 
 export default function Detail() {
     const navigation = useNavigation();
-    const message = 'Olá Maia, estou entrando em contato para comprar um assento no voo "São paulo - 30/06 - 14:00" com o valor de R$ 220,00.';
+    const route = useRoute();
+
+    const flight = route.params.flight;
+    const message = `Olá ${flight.name}, estou entrando em contato para comprar um assento no voo "${flight.destiny} - ${flight.data} - ${flight.hour}" com o valor de ${Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(flight.value)}`;
 
     function navigateBack() {
         navigation.goBack();
@@ -18,8 +21,8 @@ export default function Detail() {
 
     function sendMail() {
         MailComposer.composeAsync({
-            subject: 'Comprar voo: Sâo Paulo - 30/06 - 14:00',
-            recipients: ['mateusgomes.nascimento21@gmail.com'],
+            subject: `Comprar voo: ${flight.destiny} - ${flight.data} - ${flight.hour}`,
+            recipients: [flight.email],
             body: message,
         })
     }
@@ -40,16 +43,16 @@ export default function Detail() {
 
             <View style={styles.flight}>
                 <Text style={[styles.flightProperty, { marginTop: 0 }]}>AIRLINE:</Text>
-                <Text style={styles.flightValue}>Maia</Text>
+                <Text style={styles.flightValue}>{flight.name} de {flight.city}/{flight.uf}</Text>
 
                 <Text style={styles.flightProperty}>DESTINO:</Text>
-                <Text style={styles.flightValue}>São Paulo</Text>
+                <Text style={styles.flightValue}>{flight.destiny}</Text>
 
                 <Text style={styles.flightProperty}>DATA/HORA:</Text>
-                <Text style={styles.flightValue}>30/06 - 14:00</Text>
+                <Text style={styles.flightValue}>{flight.data} - {flight.hour}</Text>
 
                 <Text style={styles.flightProperty}>PREÇO:</Text>
-                <Text style={styles.flightValue}>R$ 220,00</Text>
+                <Text style={styles.flightValue}>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(flight.value)}</Text>
             </View>
 
             <View style={styles.contactBox}>

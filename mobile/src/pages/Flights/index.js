@@ -14,8 +14,8 @@ export default function Flights() {
     const [total, setTotal] = useState(0);
     const navigation = useNavigation();
 
-    function navigateToDetail() {
-        navigation.navigate('Detail');
+    function navigateToDetail(flight) {
+        navigation.navigate('Detail', { flight });
     }
 
     async function loadFlights() {
@@ -61,7 +61,7 @@ export default function Flights() {
                         <Text style={styles.flightProperty}>PREÇO:</Text>
                         <Text style={styles.flightValue}>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(flight.value)}</Text>
 
-                        <TouchableOpacity style={styles.detailsButton} onPress={navigateToDetail}>
+                        <TouchableOpacity style={styles.detailsButton} onPress={() => navigateToDetail(flight)}>
                             <Text style={styles.detailsButtonText}>Entrar em contato</Text>
                             <Feather name="arrow-right" size={16} color='#17333C' />
                         </TouchableOpacity>
