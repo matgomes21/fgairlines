@@ -10,7 +10,7 @@ module.exports = {
     },
 
     async create (request,response) {
-        const { destiny, date, hour, value } = request.body;
+        const { destiny, data, hour, value } = request.body;
         const airline_id = request.headers.authorization;
 
         const [id] = await connection('flights').insert({
