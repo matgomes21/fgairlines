@@ -23,6 +23,20 @@ export default function Profile() {
         })
     },[airlineId]);
 
+    async function handleDeleteFlight(id) {
+        try {
+            await api.delete(`flights/${id}`, {
+                headers: {
+                    Authorization: airlineId,
+                }
+            });
+
+            setFlights(flights.filter(flight => flight.id !== id));
+        } catch (err) {
+            alert('Erro ao deletar voo, tente novamente.');
+        }
+    }
+
     return(
         <div className="flights-container">
             <header>
@@ -48,7 +62,7 @@ export default function Profile() {
                         <strong>PREÇO:</strong>
                         <p>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(flight.value)}</p>
 
-                        <button type="button">
+                        <button onClick={() => handleDeleteFlight(flight.id)} type="button">
                             <FiTrash2 size={20} color="#17333C" />
                         </button>
                     </li>
