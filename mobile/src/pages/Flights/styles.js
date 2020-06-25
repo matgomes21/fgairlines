@@ -17,7 +17,7 @@ export default StyleSheet.create({
 
     headerText: {
         fontSize: 15,
-        color: '#737380',
+        color: '#17333C',
     },
 
     headerTextBold: {
@@ -35,10 +35,10 @@ export default StyleSheet.create({
     description: {
         fontSize: 16,
         lineHeight: 24,
-        color: '#737380'
+        color: '#17333C'
     },
 
-    incidentList: {
+    flightList: {
         marginTop: 32,
 
     },
