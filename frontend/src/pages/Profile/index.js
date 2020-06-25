@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { FiPower, FiTrash2 } from 'react-icons/fi';
 
 import api from '../../services/api';
@@ -12,6 +12,8 @@ export default function Profile() {
     const [flights, setFlights] = useState([]);
 
     const airlineId = localStorage.getItem('airlineId');
+
+    const history = useHistory();
 
     useEffect(() => {
         api.get('profile', {
@@ -37,13 +39,19 @@ export default function Profile() {
         }
     }
 
+    function handleLogout() {
+        localStorage.clear();
+
+        history.push('/');
+    }
+
     return(
         <div className="flights-container">
             <header>
                 <img src={logo} alt="FGAirlines" />
                 
                 <Link className="button" to="/flights/new">Cadastrar novo voo</Link>
-                <button type="button">
+                <button type="button" onClick={handleLogout}>
                     <FiPower size={24} color="#ffffff" />
                 </button>
             </header>
