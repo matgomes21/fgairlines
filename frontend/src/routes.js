@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Login from './pages/Login';
 import Register from './pages/Register';
-import Flights from './pages/Flights';
+import Profile from './pages/Profile';
 import NewFlight from './pages/NewFlight';
 
 export default function Routes() {
@@ -13,7 +13,7 @@ export default function Routes() {
                 <Route path="/" exact component={Login} />
                 <Route path="/register" component={Register} />
 
-                <Route path="/flights" exact component={Flights} />
+                <Route path="/profile" exact component={Profile} />
                 <Route path="/flights/new" component={NewFlight} />
             </Switch>
         </BrowserRouter>

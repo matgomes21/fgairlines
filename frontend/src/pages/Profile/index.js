@@ -6,7 +6,7 @@ import './styles.css';
 
 import logo from '../../assets/logo.svg';
 
-export default function Flights() {
+export default function Profile() {
     return(
         <div className="flights-container">
             <header>
