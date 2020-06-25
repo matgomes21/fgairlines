@@ -6,7 +6,17 @@ module.exports = {
 
         const [count] = await connection('flights').count();
 
-        const flights = await connection('flights').limit(5).offset((page-1)*5).select('*');
+        const flights = await connection('flights')
+        .join('airlines', 'airlines.id', '=', 'flights.airline_id')
+        .limit(5)
+        .offset((page-1)*5)
+        .select([
+            'flights.*',
+            'airlines.name',
+            'airlines.email',
+            'airlines.city',
+            'airlines.uf'
+        ]);
 
         response.header('X-Total-Count',count['count(*)']);
         
