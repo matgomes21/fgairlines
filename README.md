@@ -14,7 +14,7 @@ Once upon a time, there was an OO project made in Ruby on Rails called **FGAirli
 
 # Mobile Demo
 
-<img src="./github/mobile-demo.gif" />
+<img src="./github/mobile-demo.gif?raw=true" />
 
 # Dependencies
 
