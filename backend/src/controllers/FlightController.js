@@ -4,14 +4,7 @@ module.exports = {
     async index(request,response) {
         const { page = 1 } = request.query;
 
-        const flights = await connection('flights').limit(5).offset((page-1)*5)
-        .select([
-            'flights.*',
-            'airlines.name',
-            'airlines.email',
-            'airlines.city',
-            'airlines.uf'
-        ]);
+        const flights = await connection('flights').limit(5).offset((page-1)*5).select('*');
 
         return response.json(flights);
     },
@@ -22,7 +15,7 @@ module.exports = {
 
         const [id] = await connection('flights').insert({
             destiny,
-            date,
+            data,
             hour,
             value,
             airline_id,
@@ -38,7 +31,7 @@ module.exports = {
 
         const flight = await connection('flights').where('id',id).select('airline_id').first();
 
-        if(flights.airline_id!==airline_id){
+        if(flight.airline_id!==airline_id){
             return response.status(401).json({error: 'Operation not permited'});
         }
 

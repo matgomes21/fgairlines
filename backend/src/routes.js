@@ -15,8 +15,6 @@ routes.get('/profile',ProfileController.index);
 
 routes.get('/flights',FlightController.index);
 routes.post('/flights',FlightController.create);
-routes.delete('/flights',FlightController.delete);
-
-
+routes.delete('/flights/:id',FlightController.delete);
 
 module.exports = routes;
