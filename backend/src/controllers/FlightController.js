@@ -27,7 +27,7 @@ module.exports = {
     async delete(request,response) {
         const { id } = request.params;
 
-        const airline_id = request.header.authorization;
+        const airline_id = request.headers.authorization;
 
         const flight = await connection('flights').where('id',id).select('airline_id').first();
 
