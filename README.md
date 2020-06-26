@@ -1,4 +1,6 @@
-<img src="https://github.com/matgomes21/fgairlines/blob/master/frontend/src/assets/big-logo.svg?raw=true" />
+<h1 align="center">
+    <img src="https://github.com/matgomes21/fgairlines/blob/master/frontend/src/assets/big-logo.svg?raw=true" />
+</h1>
 
 ## Remake of an OO project made by me and my friend Vinícius Saturnino
 
@@ -14,7 +16,9 @@ The first version of this application was made on **Ruby on Rails** by me and my
 
 # Mobile Demo
 
-<img src="./github/mobile-demo.gif?raw=true" />
+<h1 align="center">
+    <img src="./github/mobile-demo.gif?raw=true" height="425" />
+</h1>
 
 # Dependencies
 
