@@ -2,11 +2,11 @@
 
 ## Remake of an OO project made by me and my friend Vinícius Saturnino
 
-Once upon a time, there was an OO project made in Ruby on Rails called **FGAirlines** by me and my friend Vinícius <a href="https://gitlab.com/viniciussaturnino07/fgairlines">( Link Here )</a> . We decided to wake up this sleeping giant, but in this time, with **NodeJS**, **React** and **React Native**.
+The first version of this application was made on **Ruby on Rails** by me and my friend Vinícius <a href="https://gitlab.com/viniciussaturnino07/fgairlines">(Link Here)</a> . This time, we decided to remake the project with **NodeJS**, **React** and **React Native**.
 
 # Application
 
-**FGAirlines** is a **Web** and **Mobile** application for flight reservation. Airlines can register itselves on the web application and register new flights with destiny, date, hour and price. Airlines can also delete previously created flights, but not flights created by others airlines. Customers can see all the flights avaiable on mobile application and contact with email or whatsapp to buy a seat.
+**FGAirlines** is a **Web** and **Mobile** application for flight reservation. Airlines can register itselves on the web application and register new flights with destination, date, hour and price. Airlines can also delete previously created flights, but not flights created by others airlines. Customers can see all the flights available on the mobile application and contact by email or whatsapp to buy a seat.
 
 # Web Demo
 
