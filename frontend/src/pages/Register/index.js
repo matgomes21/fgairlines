@@ -10,6 +10,7 @@ import logo from '../../assets/logo.svg';
 export default function Register() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const [city, setCity] = useState('');
     const [uf, setUf] = useState('');
 
@@ -21,6 +22,7 @@ export default function Register() {
         const data = {
             name,
             email,
+            password,
             city,
             uf,
         }
@@ -57,6 +59,10 @@ export default function Register() {
                     <input type="email" placeholder="E-mail" 
                         value={email}
                         onChange={e=>setEmail(e.target.value)}
+                    />
+                    <input type="password" placeholder="Senha" 
+                        value={password}
+                        onChange={e=>setPassword(e.target.value)}
                     />
                     <input placeholder="Cidade" 
                         value={city}
