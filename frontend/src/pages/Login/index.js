@@ -10,16 +10,18 @@ import logo from '../../assets/big-logo.svg';
 import plane from '../../assets/big-plane.svg'
 
 export default function Login() {
-    const [id, setId] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const history = useHistory();
 
     async function handleLogin(e) {
         e.preventDefault();
 
         try{
-            const response = await api.post('sessions', { id });
+            const response = await api.post('sessions', { email, password });
 
-            localStorage.setItem('airlineId', id);
+            localStorage.setItem('airlineEmail', email);
+            localStorage.setItem('airlinePassword', password);
             localStorage.setItem('airlineName', response.data.name);
 
             history.push('/profile');
@@ -36,9 +38,16 @@ export default function Login() {
                 <form onSubmit={handleLogin}>
                     <h1>Faça seu login</h1>
 
-                    <input placeholder="Sua ID" 
-                        value={id}
-                        onChange={e=>setId(e.target.value)}
+                    <input placeholder="Seu E-mail" 
+                        value={email}
+                        onChange={e=>setEmail(e.target.value)}
+                        style={{marginBottom: "10px"}}
+                    />
+                    <input placeholder="Sua Senha" 
+                        type="password"
+                        value={password}
+                        onChange={e=>setPassword(e.target.value)}
+                        style={{marginBottom: "5px"}}
                     />
                     <button className="button" type="submit">Entrar</button>
 
