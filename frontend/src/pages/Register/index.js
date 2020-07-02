@@ -29,7 +29,7 @@ export default function Register() {
 
         try{
             const response = await api.post('airlines', data);
-            alert(`ID de acesso: ${response.data.id}`);
+            alert(`Cadastro realizado com sucesso!`);
             history.push('/');
         }catch(err){
             alert('Erro no cadastro, tente novamente.');
