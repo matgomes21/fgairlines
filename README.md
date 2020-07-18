@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src="https://github.com/matgomes21/fgairlines/blob/master/frontend/src/assets/big-logo.svg?raw=true" />
+    <img src="./frontend/src/assets/big-logo.svg" />
 </h1>
 
 ## Remake of an OO project made by me and my friend Vinícius Saturnino
