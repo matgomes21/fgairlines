@@ -1,48 +1,78 @@
-<h1 align="center">
+<p align="center">
     <img src="./frontend/src/assets/big-logo.svg" />
-</h1>
+</p>
 
-## Remake of an OO project made by me and my friend Vinícius Saturnino
+ <h1 align="center">
+    Flight Booking Platform ✈️
+ </h1>
 
-The first version of this application was made on **Ruby on Rails** by me and my friend Vinícius <a href="https://gitlab.com/viniciussaturnino07/fgairlines">(Link Here)</a> . This time, we decided to remake the project with **NodeJS**, **React** and **React Native**.
+This application is a remake of a college project developed by me and my friend [Vinícius Saturnino](https://github.com/viniciussaturnino). The [first version](https://gitlab.com/viniciussaturnino07/fgairlines) was totally made on **Ruby on Rails**, and now we decided to use a **JavaScript Full-Stack**.
 
-# Application
+# ✈ Technologies
 
-**FGAirlines** is a **Web** and **Mobile** application for flight reservation. Airlines can register itselves on the web application and register new flights with destination, date, hour and price. Airlines can also delete previously created flights, but not flights created by others airlines. Customers can see all the flights available on the mobile application and contact by email or whatsapp to buy a seat.
+- [NodeJS](https://nodejs.org/en/)
+- [ReactJS](https://reactjs.org/)
+- [React Native](https://reactnative.dev/)
+- [Express](https://expressjs.com/pt-br/)
+- [Axios](https://www.npmjs.com/package/axios)
+- [Expo](https://expo.io/)
 
-# Web Demo
+# ✈ Application
 
-<img src="./github/desktop-demonstration.gif?raw=true" />
+**FGAirlines** is a **Web** and **Mobile** application for flight booking.
 
-# Mobile Demo
+## Functionalities
 
-<h1 align="center">
+✈ Airlines can register itselves on the web application;
+
+✈ Airlines can login;
+
+✈ Airlines can register new flights with destination, date, hour and price;
+
+✈ Airlines can delete previously created flights, but not flights created by others airlines;
+
+✈ Customers can see all the flights available on the mobile application and contact airlines by email or whatsapp to buy a seat.
+
+# ✈ Web Demo
+
+<p align="center">
+    <img src="./github/desktop-demonstration.gif?raw=true" />
+</p>
+
+# ✈ Mobile Demo
+
+<p align="center">
     <img src="./github/mobile-demo.gif?raw=true" height="425" />
-</h1>
+</p>
 
-# Dependencies
+# ✈ Dependencies
 
-- **Node** - v10.19.0+
-- **npm** - v6.14.4+
-- **yarn** - v1.22.4+
+- [npm](https://www.npmjs.com/) - v6.14.4+
+- [yarn](https://yarnpkg.com/) - v1.22.4+
+- [git](https://git-scm.com/)
 
-# How to run
+# ✈ How to run
+
+Clone this repository.
+```
+git clone https://github.com/matgomes21/fgairlines.git
+```
+Execute ```yarn install``` or ```npm install``` on backend, frontend and mobile folders to install the dependencies.
 
 ## Web
-1. Clone this rep
-2. Execute ```$ npm install``` on "/backend" and "/frontend" folders to install dependencies;
-3. On backend folder, execute ```$ npm start```, then execute the same command on frontent folder;
-4. The application is now running on <a href=http://localhost:3000> http://localhost:3000</a>.
+
+Execute ```yarn start``` or ```npm start``` on backend and frontend folders to start the web application.
+
+The application is avaiable on [localhost:3000](http://localhost:3000).
 
 ## Mobile
-1. First, execute <code>$ yarn install</code> on <code>'./mobile'</code> folder to install dependencies
-2. Make sure that your phone and your computer are connected on the same internet
-3. Then, execute <code>$ yarn start</code> on <code>'./mobile'</code> folder
-4. A window will open automatically, and then copy the url link gived near the QRCode or scanning the QRCode
-5. Go on ```'./mobile/src/services/api.js'``` file, and change this url:  
- <code>baseURL: 'http://192.168.15.8:3333'</code>  
- to your copied url changing the content after the ':' for 3333 (same as it where on previous code)
- 6. Make sure the Web App is running
- 7. Download 'Expo' app on PlayStore or AppStore
- 8. Run <code>$ yarn start</code> again on <code>'./mobile'</code> folder and scan the QRCode with Expo app
- 9. Enjoy the application :)
+
+Execute ```yarn start``` or ```npm start``` on backend and mobile folders to start the mobile application.
+
+Access [localhos:19002](http://localhost:19002/) and read the QR Code with your phone or Android/iOS emulator with [Expo](https://expo.io/) app.
+<br>
+<br>
+
+---
+
+<p align="center">Made with ❤️ by <a href="https://github.com/matgomes21">Mateus Gomes</a> and <a href="https://github.com/viniciussaturnino">Vinícius Saturnino</a></p>
