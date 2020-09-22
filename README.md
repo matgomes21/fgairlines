@@ -23,15 +23,15 @@ This application is a remake of a college project developed by me and my friend 
 
 ## Functionalities
 
-✈ Airlines can register itselves on the web application;
+- Airlines can register itselves on the web application;
 
-✈ Airlines can login;
+- Airlines can login;
 
-✈ Airlines can register new flights with destination, date, hour and price;
+- Airlines can register new flights with destination, date, hour and price;
 
-✈ Airlines can delete previously created flights, but not flights created by others airlines;
+- Airlines can delete previously created flights, but not flights created by others airlines;
 
-✈ Customers can see all the flights available on the mobile application and contact airlines by email or whatsapp to buy a seat.
+- Customers can see all the flights available on the mobile application and contact airlines by email or whatsapp to buy a seat.
 
 # ✈ Web Demo
 
@@ -63,13 +63,13 @@ Execute ```yarn install``` or ```npm install``` on backend, frontend and mobile 
 
 Execute ```yarn start``` or ```npm start``` on backend and frontend folders to start the web application.
 
-The application is avaiable on [localhost:3000](http://localhost:3000).
+The application is available on [localhost:3000](http://localhost:3000).
 
 ## Mobile
 
 Execute ```yarn start``` or ```npm start``` on backend and mobile folders to start the mobile application.
 
-Access [localhos:19002](http://localhost:19002/) and read the QR Code with your phone or Android/iOS emulator with [Expo](https://expo.io/) app.
+Access [localhost:19002](http://localhost:19002/) and read the QR Code with your phone or Android/iOS emulator with [Expo](https://expo.io/) app.
 <br>
 <br>
 
