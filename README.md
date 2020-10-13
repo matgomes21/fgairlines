@@ -38,13 +38,13 @@ This application is a remake of a college project developed by me and my friend 
 # ✈ Web Demo
 
 <p align="center">
-    <img src="./github/desktop-demonstration.gif?raw=true" />
+    <img alt="Desktop Demonstration" src="https://raw.githubusercontent.com/matgomes21/fgairlines/master/github/desktop-demonstration.gif" />
 </p>
 
 # ✈ Mobile Demo
 
 <p align="center">
-    <img src="./github/mobile-demo.gif?raw=true" height="425" />
+    <img alt="Mobile Demonstration" src="https://github.com/matgomes21/fgairlines/blob/master/github/mobile-demo.gif?raw=true" height="425" />
 </p>
 
 # ✈ Dependencies
