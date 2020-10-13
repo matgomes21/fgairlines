@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="./frontend/src/assets/big-logo.svg" />
+    <img alt="FGAirlines" src="https://raw.githubusercontent.com/matgomes21/fgairlines/924882e7e055d2aa63a7553955fed78f8ff9924b/frontend/src/assets/big-logo.svg" />
 </p>
 
  <h1 align="center">
