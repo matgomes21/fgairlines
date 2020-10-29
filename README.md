@@ -6,6 +6,11 @@
     Flight Booking Platform ✈️
  </h1>
 
+ <p align="center">
+    <a href="https://github.com/matgomes21/fgairlines/blob/master/READMEpt.md">Português</a>&nbsp&nbsp&nbsp&nbsp
+    <a href="https://github.com/matgomes21/fgairlines/blob/master/README.md">English</a>
+</p>
+
 This application is a remake of a college project developed by me and my friend [Vinícius Saturnino](https://github.com/viniciussaturnino). The [first version](https://gitlab.com/viniciussaturnino07/fgairlines) was totally made on **Ruby on Rails**, and now we decided to use a **JavaScript Full-Stack**.
 
 [Application's Layout](https://www.figma.com/file/YvI3f4UZkkZOwv7aggcUVa/FGAirlines?node-id=0%3A1) made in [Figma](https://www.figma.com/).
