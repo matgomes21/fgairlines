@@ -15,7 +15,7 @@ Essa aplicação é uma outra versão de um projeto da faculdade desenvolvido po
 
 [Layout da aplicação](https://www.figma.com/file/YvI3f4UZkkZOwv7aggcUVa/FGAirlines?node-id=0%3A1) feito no [Figma](https://www.figma.com/).
 
-# ✈ TTecnologias
+# ✈ Tecnologias
 
 - [NodeJS](https://nodejs.org/en/)
 - [ReactJS](https://reactjs.org/)
